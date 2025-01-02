@@ -1,0 +1,76 @@
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.arrow.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.testimonial-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.testimonial {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.testimonial.current {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.testimonial.next {
+  transform: translateY(-100%);
+  opacity: 1;
+}
+
+.image {
+  margin-bottom: 20px;
+}
+
+.designation {
+  font-style: italic;
+  color: gray;
+}
+
+.rating {
+  color: gold;
+  font-size: 1.2rem;
+}
